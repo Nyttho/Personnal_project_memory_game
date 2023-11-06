@@ -65,13 +65,13 @@ button:active {
 }
 
 .card {
-  width: calc(5vw + 20px);
+  width: calc(5vw + 45px);
   aspect-ratio: 1/1;
   background-color: #fff;
   border: 1px solid black;
   position: relative;
   cursor: pointer;
-  font-size: calc(0.5rem + 2vw);
+  font-size: calc(0.8rem + 2vw);
 }
 
 .front {
@@ -106,4 +106,22 @@ button:active {
   font-size: calc(2rem + 2vw);
   width: 500px;
   text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .game-board {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .commands {
+    flex-direction: row;
+    gap: 15px;
+    margin: 1rem 0;
+  }
 }
