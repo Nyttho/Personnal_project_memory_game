@@ -99,7 +99,7 @@ button:active {
   top: 25%;
   right: 25%;
   color: red;
-  border: 10px solid red;
+  border: 11px solid red;
   transform: rotate(-45deg);
   z-index: 99;
   font-size: 8rem;
