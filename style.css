@@ -23,30 +23,33 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 200px;
+  margin: 0 15px;
+  width: 20vw;
 }
 
 .timer {
   font-family: "Orbitron", sans-serif;
-  font-size: 3rem;
+  font-size: calc(1.2rem + 2vw);
 }
 
 .commands {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 150px;
+  min-height: 40%;
 }
 
 button {
-  min-width: 150px;
-  height: 50px;
+  min-width: 10vw;
   text-transform: uppercase;
   font-weight: 600;
   border: none;
   box-shadow: 5px 5px 10px;
   border-radius: 15px;
   background-color: orange;
+  padding: 0.8em 1rem;
+  font-size: calc(0.2rem + 1.5vw);
+  cursor: pointer;
 }
 
 button:active {
@@ -62,13 +65,13 @@ button:active {
 }
 
 .card {
-  width: 100px;
-  height: 100px;
+  width: calc(5vw + 20px);
+  aspect-ratio: 1/1;
   background-color: #fff;
   border: 1px solid black;
   position: relative;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: calc(0.5rem + 2vw);
 }
 
 .front {
@@ -96,13 +99,11 @@ button:active {
 .win {
   display: none;
   position: absolute;
-  top: 25%;
-  right: 25%;
   color: red;
   border: 11px solid red;
   transform: rotate(-45deg);
   z-index: 99;
-  font-size: 8rem;
+  font-size: calc(2rem + 2vw);
   width: 500px;
   text-align: center;
 }

@@ -79,9 +79,11 @@ const pairMatche = () => {
 const compare = () => {
   if (showedCards.length === 2) {
     if (showedCards[0].innerText !== showedCards[1].innerText) {
+      removeClickEvent();
       showedCards.forEach((card) => {
         setTimeout(() => {
           card.children[1].style.zIndex = "1";
+          addClickEvent();
         }, 600);
       });
     } else {
