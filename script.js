@@ -90,7 +90,6 @@ const compare = () => {
       pairMatche();
     }
     showedCards = [];
-    console.log(showedCards);
   }
 };
 
@@ -120,7 +119,6 @@ initGame.addEventListener("click", () => {
   shuffle();
   startTimer();
   addClickEvent();
-
   initGame.disabled = "true";
   reset.disabled = "";
   reset.addEventListener("click", resetGame);
@@ -144,4 +142,5 @@ const resetGame = () => {
   removeClickEvent();
   showedCards = [];
   win.style.display = "none";
+  matchedPairs = 0;
 };
