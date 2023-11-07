@@ -13,7 +13,7 @@ let seconds = 0,
 let timeoutId;
 
 let matchedPairs = 0;
-const totalPairs = 8;
+const totalPairs = cards.length / 2;
 
 const win = document.querySelector(".win");
 
