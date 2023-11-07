@@ -72,7 +72,6 @@ const checkWin = () => {
 
 const pairMatche = () => {
   matchedPairs++;
-  console.log(matchedPairs);
   checkWin();
 };
 
@@ -97,9 +96,13 @@ const compare = () => {
 const showCard = (event) => {
   const card = event.currentTarget;
   const front = event.currentTarget.querySelector(".front");
-  front.style.zIndex = "3";
-  showedCards.push(card);
-  compare();
+  const zIndex = front.style.zIndex;
+
+  if (zIndex !== "3") {
+    front.style.zIndex = "3";
+    showedCards.push(card);
+    compare();
+  }
 };
 
 const addClickEvent = () => {
@@ -134,9 +137,6 @@ const resetGame = () => {
   minutes = 0;
   clearTimeout(timeoutId);
   displayTime();
-  cards.forEach((card) => {
-    card.removeEventListener("click", showCard);
-  });
   initGame.disabled = "";
   reset.disabled = "true";
   removeClickEvent();
